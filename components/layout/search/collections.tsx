@@ -5,7 +5,7 @@ import { getCollections } from 'lib/shopify';
 // import FilterList from './filter';
 import { FilterList2 } from './filter';
 
-async function CollectionList() {
+export async function CollectionList() {
   const collections = await getCollections();
   return <FilterList2 list={collections} title="Collections" />;
 }
@@ -33,7 +33,7 @@ export default function Collections() {
       }
     >
       {/* @ts-expect-error Server Component */}
-      <CollectionList />
+      {/* <CollectionList /> */}
     </Suspense>
   );
 }

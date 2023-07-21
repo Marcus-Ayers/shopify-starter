@@ -66,7 +66,7 @@ export function AddToCart({
       disabled={isMutating}
       onClick={handleAdd}
       className={clsx(
-        'mt-10 flex w-full items-center justify-center bg-black p-4 text-sm uppercase tracking-wide text-white opacity-90 hover:opacity-100 dark:bg-white dark:text-black',
+        'mt-10 flex w-full items-center justify-center rounded-md bg-black p-4 text-sm uppercase tracking-wide text-white opacity-90 hover:opacity-100 dark:bg-white dark:text-black',
         {
           'cursor-not-allowed opacity-60': !availableForSale,
           'cursor-not-allowed': isMutating

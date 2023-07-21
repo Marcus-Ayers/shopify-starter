@@ -21,6 +21,8 @@ export default function ProductGridItems({ products }: { products: Product[] }) 
               src={product.featuredImage?.url}
               width={600}
               height={600}
+              setheight="md:h-[400px] mb-10"
+              setwidth="md:w-[300px]"
             />
           </Link>
         </Grid.Item>

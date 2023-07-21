@@ -18,7 +18,7 @@ function FilterItemList({ list }: { list: ListItem[] }) {
 export function FilterList2({ list, title }: { list: ListItem[]; title?: string }) {
   return (
     <>
-      <nav className="col-span-2 w-full flex-none px-6 py-2 md:py-4 md:pl-10">
+      <nav className="col-span-2 mt-4 flex-none px-6 md:mr-10 md:px-0 ">
         {title ? (
           <h3 className="hidden font-semibold text-black dark:text-white md:block">{title}</h3>
         ) : null}
@@ -35,7 +35,7 @@ export function FilterList2({ list, title }: { list: ListItem[]; title?: string 
 export default function FilterList({ list, title }: { list: ListItem[]; title?: string }) {
   return (
     <>
-      <div className="col-span-2 w-full flex-none px-6 py-2 md:py-4 md:pl-10">
+      <div className="col-span-2 w-full flex-none px-6 py-2 md:px-0 md:py-4 md:pl-10">
         {title ? (
           <h3 className="hidden font-semibold text-black dark:text-white md:block">{title}</h3>
         ) : null}

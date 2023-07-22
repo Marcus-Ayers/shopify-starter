@@ -15,6 +15,18 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [mobileMenuIsOpen, setMobileMenuIsOpen] = useState(false);
+  console.log(document.documentElement.className);
+
+  const [activeClass, setActiveClass] = useState(false);
+
+  const toggleClass = () => {
+    if (activeClass) {
+      document.documentElement.classList.remove('dark');
+    } else {
+      document.documentElement.classList.add('dark');
+    }
+    setActiveClass(!activeClass);
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -32,6 +44,9 @@ export default function MobileMenu({ menu }: { menu: Menu[] }) {
 
   return (
     <>
+      <button className=" text-black" onClick={toggleClass}>
+        Toggle Class
+      </button>
       <button
         onClick={() => {
           setMobileMenuIsOpen(!mobileMenuIsOpen);

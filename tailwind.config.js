@@ -10,7 +10,7 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx}',
     './lib/**/*.{js,ts,jsx,tsx,mdx}'
   ],
-  // darkMode: 'class',
+  darkMode: 'class',
   theme: {
     extend: {
       fontFamily: {
@@ -50,6 +50,7 @@ module.exports = {
   },
   plugins: [
     require('@tailwindcss/typography'),
+    require('daisyui'),
     plugin(({ matchUtilities, theme }) => {
       matchUtilities(
         {

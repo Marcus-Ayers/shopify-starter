@@ -1,8 +1,6 @@
 'use client';
-
-import { useRouter, useSearchParams } from 'next/navigation';
-
 import SearchIcon from 'components/icons/search';
+import { useRouter, useSearchParams } from 'next/navigation';
 
 export default function Search() {
   const router = useRouter();
@@ -32,7 +30,7 @@ export default function Search() {
         placeholder="Search for products..."
         autoComplete="off"
         defaultValue={searchParams?.get('q') || ''}
-        className="w-full rounded-lg px-4 py-2 text-black dark:bg-black dark:text-gray-100"
+        className="w-full rounded-lg bg-white px-4 py-2 text-black dark:bg-black dark:text-gray-100"
       />
       <div className="absolute right-0 top-0 mr-3 flex h-full items-center">
         <SearchIcon className="h-5" />

@@ -9,6 +9,7 @@ import { Menu } from 'lib/shopify/types';
 import Image from 'next/image';
 import MobileMenu from './mobile-menu';
 import Search from './search';
+import Toggle from './toggle-dark';
 
 export default async function Navbar() {
   const menu = await getMenu('next-js-frontend-header-menu');
@@ -52,6 +53,9 @@ export default async function Navbar() {
 
       <div className="flex w-1/3 justify-end">
         <Suspense fallback={<CartIcon className="h-6" />}>
+          <div className="mr-10">
+            <Toggle />
+          </div>
           {/* @ts-expect-error Server Component */}
           <Cart />
         </Suspense>

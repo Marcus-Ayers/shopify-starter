@@ -1,3 +1,5 @@
+'use server';
+
 import clsx from 'clsx';
 import { Suspense } from 'react';
 
@@ -5,16 +7,16 @@ import { getCollections } from 'lib/shopify';
 // import FilterList from './filter';
 import { FilterList2 } from './filter';
 
-export async function CollectionList() {
-  const collections = await getCollections();
-  return <FilterList2 list={collections} title="Collections" />;
-}
+// export async function CollectionList() {
+//   const collections = await getCollections();
+//   return <FilterList2 list={collections} title="Collections" />;
+// }
 
 const skeleton = 'mb-3 h-4 w-5/6 animate-pulse rounded';
 const activeAndTitles = 'bg-gray-800 dark:bg-gray-300';
 const items = 'bg-gray-400 dark:bg-gray-700';
 
-export default function Collections() {
+export default async function Collections() {
   return (
     <Suspense
       fallback={

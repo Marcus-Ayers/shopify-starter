@@ -1,5 +1,5 @@
 import clsx from 'clsx';
-import { CollectionList } from 'components/layout/search/collections';
+import { CollectionList } from 'components/layout/search/collections-list';
 import FilterList from 'components/layout/search/filter';
 import { sorting } from 'lib/constants';
 import { Suspense } from 'react';
@@ -16,7 +16,10 @@ function Grid(props: React.ComponentProps<'ul'>) {
 
               <div className="flex flex-col md:flex-row">
                 <div className="">
-                  <CollectionList />
+                  <Suspense fallback={<div>Loading...</div>}>
+                    {/* @ts-expect-error Async Server Component */}
+                    <CollectionList />
+                  </Suspense>
                 </div>
                 <div>
                   <ul
